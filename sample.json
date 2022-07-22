@@ -50,7 +50,7 @@
     "is_staff": true,
     "is_active": true,
     "date_joined": "2022-07-22T21:57:58.257Z",
-    "is_student": true,
+    "is_student": false,
     "is_teacher": false,
     "groups": [],
     "user_permissions": []
