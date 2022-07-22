@@ -10,10 +10,22 @@
   "model": "courses.course",
   "pk": 1,
   "fields": {
+    "subject": 1,
     "teacher": 1,
     "title": "Cloud Computing",
     "overview": "teach cloud computing",
     "created": "2022-07-22T22:00:08.930Z"
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 2,
+  "fields": {
+    "subject": 1,
+    "teacher": 3,
+    "title": "third course",
+    "overview": "test overview 2",
+    "created": "2022-07-22T23:02:23.757Z"
   }
 },
 {
@@ -41,7 +53,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$320000$Tp5y231LVOmed2aBFGQ5hZ$u2FDq8bgncNwFEkwkdm7GULjOiuV0G0l5jOZ5xYHWMw=",
-    "last_login": "2022-07-22T21:59:30.759Z",
+    "last_login": "2022-07-22T22:58:35.018Z",
     "is_superuser": true,
     "username": "admin",
     "first_name": "",
@@ -52,6 +64,46 @@
     "date_joined": "2022-07-22T21:57:58.257Z",
     "is_student": false,
     "is_teacher": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.customuser",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$320000$PjNLtX8GT88YeoZA6GIbH5$JhwI3TPbh1Qacb+7/2MDASz6aQ44Gd3wpmBxqqdK06U=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "student",
+    "first_name": "",
+    "last_name": "",
+    "email": "user@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-07-22T22:59:00.543Z",
+    "is_student": true,
+    "is_teacher": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.customuser",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$320000$wABIZTvxV9HGq390B7P8xF$mIfz6AtjpdTcF2LtI35e/uhNRz9x1Sx9sP3GDJx/HOU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "teacher",
+    "first_name": "",
+    "last_name": "",
+    "email": "userewe4@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-07-22T22:59:26.264Z",
+    "is_student": false,
+    "is_teacher": true,
     "groups": [],
     "user_permissions": []
   }

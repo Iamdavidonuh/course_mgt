@@ -14,7 +14,7 @@ class Subject(models.Model):
 
 
 class Course(models.Model):
-
+    subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
     teacher = models.ForeignKey(
         CustomUser, related_name="course_by", on_delete=models.CASCADE
     )
