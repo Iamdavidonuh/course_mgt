@@ -1,0 +1,59 @@
+[
+{
+  "model": "courses.subject",
+  "pk": 1,
+  "fields": {
+    "title": "Computer"
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 1,
+  "fields": {
+    "teacher": 1,
+    "title": "Cloud Computing",
+    "overview": "teach cloud computing",
+    "created": "2022-07-22T22:00:08.930Z"
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 1,
+  "fields": {
+    "course": 1,
+    "title": "Introduction to cloud Computing",
+    "text": "an introduction to cloud computing",
+    "content": "videos/Vim_As_Your_Editor_6_6_-_Vim_Long_and_Prosper-e1BFdY0NBLY.mkv"
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 2,
+  "fields": {
+    "course": 1,
+    "title": "where to go from here",
+    "text": "after introduction",
+    "content": "videos/Vim_As_Your_Editor_1_6_-_The_Basic_Vim_Movements-H3o4l4GVLW0.webm"
+  }
+},
+{
+  "model": "accounts.customuser",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$320000$Tp5y231LVOmed2aBFGQ5hZ$u2FDq8bgncNwFEkwkdm7GULjOiuV0G0l5jOZ5xYHWMw=",
+    "last_login": "2022-07-22T21:59:30.759Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-07-22T21:57:58.257Z",
+    "is_student": true,
+    "is_teacher": false,
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
