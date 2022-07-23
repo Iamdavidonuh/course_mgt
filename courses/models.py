@@ -22,6 +22,10 @@ class Course(models.Model):
     overview = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
 
+    students = models.ManyToManyField(
+        CustomUser, related_name="courses_joined", blank=True
+    )
+
     def __str__(self) -> str:
         return f"{self.title} by {self.teacher}"
 
@@ -36,3 +40,12 @@ class Module(models.Model):
 
     def __str__(self) -> str:
         return self.title
+
+
+class StudentCourseCompletion(models.Model):
+
+    student = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
+    course = models.ManyToManyField(Course)
+
+    def __str__(self) -> str:
+        return self.student

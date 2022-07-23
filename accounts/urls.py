@@ -6,7 +6,7 @@ from accounts.api import viewsets
 router = routers.DefaultRouter()
 
 router.register(
-    "register/student", viewsets.StudentRegistrationViewset, basename="student-reg"
+    "register/student", viewsets.AddStudentsViewset, basename="register-student"
 )
 router.register(
     "register/teacher", viewsets.TeacherRegistrationViewset, basename="teacher-reg"
@@ -14,4 +14,9 @@ router.register(
 
 urlpatterns = [
     path("api/", include(router.urls)),
+    path(
+        "student/delete/<pk>/",
+        viewsets.DeleteStudentView.as_view(),
+        name="delete_student",
+    ),
 ]

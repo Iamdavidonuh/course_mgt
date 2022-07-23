@@ -19,3 +19,21 @@ class ModuleCreationSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Module
         fields = "__all__"
+
+
+class StudentSerializer(serializers.ModelSerializer):
+    class Meta:
+
+        model = CustomUser
+        fields = "__all__"
+
+
+class StudentCourseCompletionSerializer(serializers.ModelSerializer):
+    student = StudentSerializer()
+
+    class Meta:
+
+        model = models.StudentCourseCompletion
+        fields = [
+            "student",
+        ]
