@@ -25,3 +25,7 @@ List of uncompleted tasks
   I would have created a many-one relationship of contents->Course
 
   And using the django contenttype app and model inheritance, i would create a diverse model that various types of contents(Files, videos, audios, pictures) could be stored in the contents model
+
+## API ENTRYPOINT
+
+- http://127.0.0.1:8000/swagger/
