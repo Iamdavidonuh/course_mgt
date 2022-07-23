@@ -8,6 +8,7 @@ router = routers.DefaultRouter()
 router.register("subject", viewsets.SubjectCreationViewset, basename="subject")
 router.register("course", viewsets.CourseCreationViewset, basename="course")
 router.register("module", viewsets.ModuleCreationViewset, basename="module")
+router.register("my-courses", viewsets.ListAllMyCourses, basename="my-courses")
 
 
 urlpatterns = [

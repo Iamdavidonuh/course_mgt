@@ -101,3 +101,11 @@ class AddStudentToCourseView(views.APIView):
         course = get_object_or_404(models.Course, pk=pk)
         course.students.add(student)
         return response.Response({"status": "success"})
+
+
+class ListAllMyCourses(viewsets.GenericViewSet, mixins.ListModelMixin):
+    serializer_class = serializers.CourseCreationSerializer
+    permission_classes = [account_permissions.IsStudent]
+
+    def get_queryset(self):
+        return models.Course.objects.filter(students=self.request.user).all()
